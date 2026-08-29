@@ -3,18 +3,10 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from django.contrib.auth import get_user_model
-
+from authentication.tests.test_constants import *
 
 CustomUser = get_user_model()
 
-VALID_USER_EMAIL = 'reader@gmail.com'
-VALID_USER_PASSWORD = 'StroNg@17pass'
-VALID_USER_INVALID_PASSWORD = VALID_USER_PASSWORD.capitalize()
-
-INVALID_USER_EMAIL = 'invalid@gmail.com'
-INVALID_USER_PASSWORD = 'Pass#Word'
-
-TIME_TO_WAIT = 10
 
 
 class LoginLogoutTest(LiveServerTestCase):
