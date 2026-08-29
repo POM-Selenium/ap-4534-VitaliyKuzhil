@@ -31,3 +31,16 @@ The test case involves verifying the input of correct and incorrect credentials 
 * The user should be able to successfully log out of the account when clicking the "Logout" button.
 * The user should not be able to log in to the website when invalid credentials are entered and should receive an appropriate error message.
 ### AND RECORD SHORT VIDEO (2-10MIN) THAT SHOWS FUNCTIONALITY IN ACTION
+
+
+### Run tests:
+
+* Selenium with unittest
+```bash
+python manage.py test authentication.tests.tests_ui_selenium_unittest
+```
+
+* Selenium with pytest
+```bash
+pytest authentication/tests/tests_ui_selenium_pytest.py --ds=library.settings -vs
+```
