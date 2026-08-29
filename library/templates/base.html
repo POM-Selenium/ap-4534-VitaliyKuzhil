@@ -25,10 +25,10 @@
                 <ul class="navbar-nav">
                     {% if not request.user.is_authenticated %}
                         <li class="nav-item">
-                            <a href="{% url 'authentication:login' %}" class="nav-link">LogIn</a>
+                            <a id="login" href="{% url 'authentication:login' %}" class="nav-link">LogIn</a>
                         </li>
                         <li class="nav-item">
-                            <a href="{% url 'authentication:register' %}" class="nav-link">Register</a>
+                            <a id="register" href="{% url 'authentication:register' %}" class="nav-link">Register</a>
                         </li>
                     {% else %}
                         {% if request.user.is_staff %}
@@ -60,7 +60,7 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="{% url 'authentication:logout' %}" class="nav-link">LogOut</a>
+                            <a id="logout" href="{% url 'authentication:logout' %}" class="nav-link">LogOut</a>
                         </li>
                     {% endif %}
                 </ul>
